@@ -13,6 +13,11 @@
 		6C00F32825E92BF7004F84CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C00F32725E92BF7004F84CE /* Preview Assets.xcassets */; };
 		6C00F33325E92BF7004F84CE /* GraphQLAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C00F33225E92BF7004F84CE /* GraphQLAppTests.swift */; };
 		6C00F33E25E92BF8004F84CE /* GraphQLAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C00F33D25E92BF8004F84CE /* GraphQLAppUITests.swift */; };
+		6C855F7B25E9304100ACC998 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C855F7A25E9304100ACC998 /* Network.swift */; };
+		6C855F8025E9308100ACC998 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C855F7F25E9308100ACC998 /* Book.swift */; };
+		6C855F8725E930E700ACC998 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C855F8625E930E700ACC998 /* Author.swift */; };
+		6C855F8F25E9310300ACC998 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C855F8E25E9310300ACC998 /* Response.swift */; };
+		6C855F9425E9311000ACC998 /* GraphqlEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C855F9325E9310F00ACC998 /* GraphqlEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		6C00F33925E92BF8004F84CE /* GraphQLAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphQLAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C00F33D25E92BF8004F84CE /* GraphQLAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLAppUITests.swift; sourceTree = "<group>"; };
 		6C00F33F25E92BF8004F84CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C855F7A25E9304100ACC998 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		6C855F7F25E9308100ACC998 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		6C855F8625E930E700ACC998 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		6C855F8E25E9310300ACC998 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		6C855F9325E9310F00ACC998 /* GraphqlEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphqlEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,8 @@
 		6C00F31F25E92BF6004F84CE /* GraphQLApp */ = {
 			isa = PBXGroup;
 			children = (
+				6C855F9B25E9327000ACC998 /* GraphQL */,
+				6C855F8525E930B100ACC998 /* Model */,
 				6C00F32025E92BF6004F84CE /* GraphQLAppApp.swift */,
 				6C00F32225E92BF6004F84CE /* ContentView.swift */,
 				6C00F32425E92BF7004F84CE /* Assets.xcassets */,
@@ -128,6 +140,25 @@
 				6C00F33F25E92BF8004F84CE /* Info.plist */,
 			);
 			path = GraphQLAppUITests;
+			sourceTree = "<group>";
+		};
+		6C855F8525E930B100ACC998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C855F7F25E9308100ACC998 /* Book.swift */,
+				6C855F8625E930E700ACC998 /* Author.swift */,
+				6C855F8E25E9310300ACC998 /* Response.swift */,
+				6C855F9325E9310F00ACC998 /* GraphqlEndpoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C855F9B25E9327000ACC998 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				6C855F7A25E9304100ACC998 /* Network.swift */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C855F9425E9311000ACC998 /* GraphqlEndpoint.swift in Sources */,
+				6C855F8025E9308100ACC998 /* Book.swift in Sources */,
 				6C00F32325E92BF6004F84CE /* ContentView.swift in Sources */,
 				6C00F32125E92BF6004F84CE /* GraphQLAppApp.swift in Sources */,
+				6C855F7B25E9304100ACC998 /* Network.swift in Sources */,
+				6C855F8F25E9310300ACC998 /* Response.swift in Sources */,
+				6C855F8725E930E700ACC998 /* Author.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +497,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GraphQLAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +518,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GraphQLAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
